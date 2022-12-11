@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "Copy udev rules to /etc/udev/rules.d/"
+sudo cp `rospack find scrappy_bringup`/config/99-scrappy.rules /etc/udev/rules.d/
+
+echo "Reloading and triggering rules"
+sudo udevadm control --reload-rules
+sudo udevadm trigger

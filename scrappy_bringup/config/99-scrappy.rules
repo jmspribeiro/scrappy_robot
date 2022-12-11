@@ -1,0 +1,7 @@
+# add dialout group and read write permissions 
+ACTION=="add", KERNEL=="spidev0.0", GROUP="dialout", MODE="0666"
+ACTION=="add", KERNEL=="i2c-[0-1]*", GROUP="dialout", MODE="0666"
+ACTION=="add", KERNEL=="dialout", GROU="dialout", MODE="0666"
+ACTION=="add", KERNEL=="ttyACM0", GROUP="dialout", MODE="0666"
+ACTION=="add", KERNEL=="ttyAMA0", GROUP="dialout", MODE="0666"
+ACTION=="add", KERNEL=="gpio*", GROUP="dialout", MODE="0666"

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>scrappy_robot</name>
+  <version>0.0.1</version>
+  <description>Metapackage for my scrappy robot.</description>
+
+  <maintainer email="jorge.ribeiro@todo.todo">Jorge Pais Ribeiro</maintainer>
+
+  <license>TODO</license>
+
+  <url type="website">https://github.com/jmspribeiro/scrappy_robot</url>
+  <url type="bugtracker">https://github.com/jmspribeiro/scrappy_robot/issues</url>
+  <url type="repository">https://github.com/jmspribeiro/scrappy_robot/</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>scrappy_bringup</exec_depend>
+  <exec_depend>scrappy_base</exec_depend>
+
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>
