@@ -18,6 +18,6 @@
 
   <export>
     <!-- Other tools can request additional information be placed here -->
-
+    <metapackage />
   </export>
 </package>

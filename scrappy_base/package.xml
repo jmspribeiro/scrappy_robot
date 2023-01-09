@@ -13,7 +13,10 @@
   <url type="repository">https://github.com/jmspribeiro/scrappy_robot/</url>
 
   <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
   <exec_depend>rpi_gpio_bts7960</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>rospy</exec_depend>
 
   <export>
     <!-- Other tools can request additional information be placed here -->
