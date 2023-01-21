@@ -1,0 +1,13 @@
+<launch>
+
+  <arg name="joy_dev" default="$(optenv JOY_DEVICE /dev/input/joy)" />
+  
+  <rosparam command="load" file="$(find scrappy_control)/config/teleop_ps4.yaml" />
+  
+  <node pkg="joy" type="joy_node" name="joy_node">
+     <param name="dev" value="$(arg joy_dev)" />
+  </node>
+
+  <node pkg="teleop_twist_joy" type="teleop_node" name="teleop_node" output="screen" />
+
+</launch>

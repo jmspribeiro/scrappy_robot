@@ -1,0 +1,20 @@
+ <launch>
+
+
+  <!-- Scrappy core controllers (WIP) -->
+  <!-- - Open loop differential speed controller -->
+  <node pkg="scrappy_base" type="scrappy_core.py" name="scrappy_core" output="screen">
+    <param name="open_loop" value="true" />
+    <param name="cmd_vel_frequency" value="5.0" />
+    <param name="cmd_vel_timeout" value="3.0" />
+    <param name="wheels_driver" value="rpi_JGB37545" />
+  </node>
+
+  <!-- Joystick control -->
+  <include file="$(find scrappy_control)/launch/teleop.launch" />
+
+  <!--  debug  -->
+  <!-- rosservice call wait /scrappy_core/set_logger_level '{logger: 'rosout', level: 'DEBUG'}' -->
+  <node pkg="rosservice" type="rosservice" name="set_scrappy_core_log_level" args="call --wait /scrappy_core/set_logger_level '{logger: 'rosout', level: 'DEBUG'}' " />
+
+</launch>

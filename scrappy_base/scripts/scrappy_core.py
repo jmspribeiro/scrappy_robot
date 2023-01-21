@@ -9,6 +9,8 @@ def main(args):
   # open loop commands for now
   innerloops = speedController()
 
+  # call destructor on shutdown
+  rospy.on_shutdown(innerloops.__del__)
   rospy.spin()
 
   return 0

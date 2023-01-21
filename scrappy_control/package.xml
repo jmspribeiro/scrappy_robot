@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>scrappy_bringup</name>
+  <name>scrappy_control</name>
   <version>0.0.1</version>
-  <description>Scrappy robot installation and integration package.</description>
+  <description>Metapackage for my scrappy robot.</description>
 
   <maintainer email="jorge.ribeiro@todo.todo">Jorge Pais Ribeiro</maintainer>
 
@@ -13,11 +13,10 @@
   <url type="repository">https://github.com/jmspribeiro/scrappy_robot/</url>
 
   <buildtool_depend>catkin</buildtool_depend>
-  <exec_depend>scrappy_base</exec_depend>
-  <exec_depend>joy_teleop</exec_depend>
-  
+  <exec_depend>joy</exec_depend>
+  <exec_depend>teleop_twist_joy</exec_depend>
+
   <export>
     <!-- Other tools can request additional information be placed here -->
-
   </export>
 </package>
